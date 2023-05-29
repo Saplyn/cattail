@@ -1,0 +1,72 @@
+     cattail, version 1.0.6
+  The ANU-SDUW C++ OOP Assignment
+ _________________________________
+|                                 |
+|    __  __  _|_ _|_  __  - |     |
+|   /   /  |  |   |  /  | | |     |
+|   \__ \_/|  |/  |/ \_/| | |/    |
+|_________________________________|
+
+cattail$ help
+cattail, version 1.0.6
+ANU-SDUW C++ OOP Assignment
+
+set  - Set program status.
+new  - Instantiate new shape object,
+       store it in temporary memory.
+tmp  - View temporary memory object.
+stk  - Perform stack operation.
+exit - Exit the program.
+
+cattail$ new help
+Usage: new [shape] [property]
+Instantiate new shape object, store it in temporary memory.
+
+Possible command format:
+  new circ [r]          -  Instantiate a circle
+  new rect [l] [w]      -  Instantiate a rectangle
+  new tria [a] [b] [c]  -  Instantiate a triangle
+
+cattail$ new circ 5
+cattail$ tmp
+Circle(5.000000) [78.539815]
+cattail$ stk push
+cattail$ new rect 2 3
+cattail$ stk push
+cattail$ new tria 3 4 5
+cattail$ stk push
+cattail$ stk
+Usage: stk [operation]
+stk - Perform stack operation.
+
+Possible command format:
+  stk push   -  Push the temporary object into stack
+  stk pop    -  Pop the stack top
+  stk top    -  Retrieve the stack top
+  stk state  -  Display stack status
+
+cattail$ stk state
+Stack(3/8)
+cattail$ stk top
+Triangle(3.000000, 4.000000, 5.000000) [6.000000]
+cattail$ stk pop
+cattail$ stk pop
+cattail$ stk pop
+cattail$ stk pop
+[ERROR] Failed to obtain the `Top()` object. (stask is empty)
+[ERROR] Failed to perform a `Pop()` operation. (stask is empty)
+An exception occurred: stask is empty
+cattail$ stk state
+Stack(0/8)
+cattail$ tmp
+Nothing stored in temporary memory.
+cattail$ new tria 5 6 7
+cattail$ tmp
+Triangle(5.000000, 6.000000, 7.000000) [14.696938]
+cattail$ stk push
+cattail$ stk top
+Triangle(5.000000, 6.000000, 7.000000) [14.696938]
+cattail$ stk state
+Stack(1/8)
+cattail$ exit
+Terminate program normally.

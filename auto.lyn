@@ -1,0 +1,46 @@
+new circ 1
+tmp
+stk push
+new circ 2
+tmp
+stk push
+new circ 3
+tmp
+stk push
+new circ 4
+tmp
+stk push
+new circ 5
+tmp
+stk push
+new circ 6
+tmp
+stk push
+new circ 7
+tmp
+stk push
+new circ 8
+tmp
+stk push
+new circ 9
+tmp
+stk push
+
+stk state
+stk pop
+stk state
+stk pop
+stk state
+stk pop
+stk state
+stk pop
+stk state
+stk pop
+stk state
+stk pop
+stk state
+stk pop
+stk state
+stk pop
+stk state
+stk pop
